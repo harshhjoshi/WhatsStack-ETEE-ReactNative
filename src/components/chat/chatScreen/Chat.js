@@ -31,7 +31,7 @@ class Chat extends React.Component {
       displayNames: {},
       isSendingImg: false,
       newMessage: '',
-      height: 29.5, //MagicNo RN always sets height to this no matter what
+      height: 29.5, 
     }
     /* eslint-enable react/no-unused-state */
 
@@ -79,13 +79,6 @@ class Chat extends React.Component {
     this.setState({newMessage})
   }
 
-  //should also run onPress for a button for adding members
-  //needs functions for pushing new members into this.state.members
-  //also slicing them out
-  //also a whole sub-comp similar to the contacts arr where you can add members
-  //or cancel the add
-  //Or we could just not support adding people to groups.
-
   render() {
     const {uid, members, displayNames, newMessage, height} = this.state
     return (
@@ -114,7 +107,7 @@ class Chat extends React.Component {
               />
             ) : (
               <View>
-                <Text style={styles.noMessages}>Start a conversation ◉‿◉</Text>
+                <Text style={styles.noMessages}>Start your conversation</Text>
               </View>
             )}
           </TouchableWithoutFeedback>

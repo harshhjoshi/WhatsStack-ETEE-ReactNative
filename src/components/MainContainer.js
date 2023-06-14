@@ -39,7 +39,6 @@ class MainContainer extends Component {
   populateStoreAndListenForNewConversation = async snapshot => {
     try {
       if (snapshot.key.length >= 28) {
-        //handles messages
         const chatId = snapshot.key
         const members = snapshot.val().members
         const conversation = await this.JoinDecryptAndConvertToArr(
@@ -47,8 +46,7 @@ class MainContainer extends Component {
         )
         this.props.getMessages(chatId, members, conversation)
       } else if (snapshot.key !== 'img') {
-        //when you first connect to the database, all pre-existing fields come in as being newly added children
-        //we take advantage of this to populate the user field in the store with up to date info
+      
         const userField = {}
         userField[snapshot.key] = snapshot.val()
         this.props.getUser(userField)

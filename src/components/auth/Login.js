@@ -16,19 +16,19 @@ class Login extends Component {
     user: null,
     message: '',
     codeInput: '',
-    phoneNumber: '+1',
+    phoneNumber: '+91',
     confirmResult: null,
   }
 
   signIn = () => {
     const {phoneNumber} = this.state
-    this.setState({message: 'Sending code ...'})
+    this.setState({message: 'Sending OTP ...'})
 
     firebase
       .auth()
       .signInWithPhoneNumber(phoneNumber)
       .then(confirmResult =>
-        this.setState({confirmResult, message: 'Code has been sent!'}),
+        this.setState({confirmResult, message: 'OTP has been sent!'}),
       )
       .catch(
         this.setState({
@@ -43,7 +43,7 @@ class Login extends Component {
       confirmResult
         .confirm(codeInput)
         .then(_ => {
-          this.setState({message: 'Code Confirmed!'})
+          this.setState({message: 'OTP Confirmed!'})
         })
         .catch(this.setState({message: ``}))
     }

@@ -58,7 +58,7 @@ class CreateUser extends Component {
       const firebaseUser = firebase.database().ref(`/Users/${this.state.uid}`)
       const user = await firebaseUser.once('value')
       const exists = await user.exists()
-      const [cloudUrl, localUrl] = await this.getDefaultImg()
+      const [localUrl] = await this.getDefaultImg()
       this.props.getUser({img: localUrl})
       if (!exists) {
         const [privateKey, publicKey] = this.generateRSAKey()
