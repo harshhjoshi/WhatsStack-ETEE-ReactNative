@@ -3,17 +3,17 @@
 
 Harsh Joshi
 
-## The App
+## The App Detail
 
 WhatsStack is an end to end encrypted messaging app for Android & IOS. End to end encryption means that the messages are encrypted before they are sent in such a way that only the sender and receiver can decrypt them. Even someone with total access to the database and source code cannot decrypt a user's messages without the user's private key, which makes E2EE exceptionally secure. This app is both a completely functional messaging app, and a faithful implementation of the core concepts of E2EE.
 
 It cross references the user's contacts with our database and automatically connects you to all your contacts who also have an account with us and allows you to quickly and easily send them secure messages through the app.
 
-# WhatsStack (An end to end encrypted ios messaging app)
+# WhatsStack App Name: (An end to end encrypted ios messaging app)
 
 ![](./capture.PNG)
 
-## Tech stack
+## Tech stack & Technology Use
 
 React Native for front end &
 React-Native-Firebase for authentication and its database.
